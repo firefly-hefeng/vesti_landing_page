@@ -32,7 +32,7 @@ export const messages = {
     download: {
       kicker: "产品与下载",
       title: "选择适合你的 Vesti。",
-      description: "插件已经可用，桌面 App 处于 Beta 阶段，CLI 正在准备中。",
+      description: "插件与桌面 App 现已开放下载，安装包由官网直接提供。",
       app: "Vesti App",
       appBody: "统一捕获 Codex、Cursor、Kimi Code 与 Claude Code，查看对话、Token 与本地洞察。",
       beta: "Beta",
@@ -44,11 +44,8 @@ export const messages = {
       available: "可用",
       store: "Chrome 商店",
       manual: "手动安装包",
-      cli: "Vesti CLI",
-      cliBody: "终端版本待正式支持，目前可以关注仓库中的开发进度。",
       comingSoon: "待支持",
-      repository: "查看仓库",
-      releaseHint: "Windows 与 Linux 安装包现已开放下载；macOS 版本即将提供。",
+      releaseHint: "Windows 安装包（v0.3.0）与插件手动安装包由官网服务器直接提供；macOS 版本即将提供。",
       manualTitle: "插件手动安装步骤",
       manualSteps: [
         "点击“手动安装包”下载并解压插件。",
@@ -90,7 +87,7 @@ export const messages = {
     download: {
       kicker: "Products & downloads",
       title: "Choose the Vesti that fits your workflow.",
-      description: "The extension is available, the desktop app is in beta, and the CLI is being prepared.",
+      description: "The extension and desktop app are available now, with installers served directly from this site.",
       app: "Vesti App",
       appBody: "Capture Codex, Cursor, Kimi Code, and Claude Code with conversations, tokens, and local insights in one place.",
       beta: "Beta",
@@ -102,11 +99,8 @@ export const messages = {
       available: "Available",
       store: "Chrome Store",
       manual: "Manual package",
-      cli: "Vesti CLI",
-      cliBody: "The terminal release is not yet supported. Follow the repository for development progress.",
       comingSoon: "Coming soon",
-      repository: "View repository",
-      releaseHint: "Windows and Linux builds are available now; the macOS build is coming soon.",
+      releaseHint: "The Windows installer (v0.3.0) and the manual extension package are served directly from this site; the macOS build is coming soon.",
       manualTitle: "Manual extension install",
       manualSteps: [
         "Select Manual package, then download and unzip the extension.",

@@ -1,17 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Download, ExternalLink } from "lucide-react"
+import { AppWindow, ChevronDown, Download, ExternalLink, Puzzle } from "lucide-react"
 
 import { useLanguage } from "@/components/language-provider"
 import { messages } from "@/lib/i18n"
 import { marketingLinks } from "@/lib/marketing-config"
 
 const appPlatforms = [
-  { id: "windows", href: marketingLinks.appDownloads.windows },
-  { id: "macos", href: marketingLinks.appDownloads.macos },
-  { id: "linux", href: marketingLinks.appDownloads.linux },
+  { id: "windows", href: marketingLinks.appDownloads.windows, primary: true },
+  { id: "macos", href: marketingLinks.appDownloads.macos, primary: false },
+  { id: "linux", href: marketingLinks.appDownloads.linux, primary: false },
 ] as const
+
+const cardClass =
+  "group rounded-2xl border border-border-default bg-[rgba(252,251,248,0.72)] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[rgba(66,83,202,0.35)] hover:shadow-[0_16px_40px_-16px_rgba(66,83,202,0.28)]"
 
 export function DownloadSection() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,13 +33,21 @@ export function DownloadSection() {
             <p className="mt-4 max-w-[48ch] text-base leading-7 text-text-secondary">{copy.description}</p>
           </div>
 
-          <div className="mt-7 grid gap-3 lg:grid-cols-3">
-            <article className="rounded-xl border border-border-default bg-[rgba(252,251,248,0.72)] p-5">
+          <div className="mt-7 grid gap-4 lg:grid-cols-2">
+            <article className={cardClass}>
               <div className="flex items-center justify-between gap-3">
-                <h3 className="text-base font-medium text-text-primary">{copy.app}</h3>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#edf0ff] text-[#4253ca] transition-colors duration-200 group-hover:bg-[#4253ca] group-hover:text-white">
+                    <AppWindow className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h3 className="text-base font-medium text-text-primary">{copy.app}</h3>
+                    <p className="text-xs text-text-tertiary">v{marketingLinks.appVersion}</p>
+                  </div>
+                </div>
                 <span className="rounded-full bg-[#edf0ff] px-2.5 py-1 text-[10px] font-medium text-[#4253ca]">{copy.beta}</span>
               </div>
-              <p className="mt-3 min-h-[72px] text-sm leading-6 text-text-secondary">{copy.appBody}</p>
+              <p className="mt-4 min-h-[72px] text-sm leading-6 text-text-secondary">{copy.appBody}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {appPlatforms.map((platform) =>
                   platform.href ? (
@@ -45,7 +56,7 @@ export function DownloadSection() {
                       href={platform.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="lovable-button-secondary gap-1.5 px-3 py-2 text-xs"
+                      className={`${platform.primary ? "lovable-button-primary" : "lovable-button-secondary"} gap-1.5 px-3 py-2 text-xs`}
                     >
                       <Download className="h-3.5 w-3.5" />
                       {copy[platform.id]}
@@ -65,12 +76,20 @@ export function DownloadSection() {
               </div>
             </article>
 
-            <article className="rounded-xl border border-border-default bg-[rgba(252,251,248,0.72)] p-5">
+            <article className={cardClass}>
               <div className="flex items-center justify-between gap-3">
-                <h3 className="text-base font-medium text-text-primary">{copy.extension}</h3>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e9f7ec] text-[#257a45] transition-colors duration-200 group-hover:bg-[#257a45] group-hover:text-white">
+                    <Puzzle className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h3 className="text-base font-medium text-text-primary">{copy.extension}</h3>
+                    <p className="text-xs text-text-tertiary">v{marketingLinks.extensionVersion}</p>
+                  </div>
+                </div>
                 <span className="rounded-full bg-[#e9f7ec] px-2.5 py-1 text-[10px] font-medium text-[#257a45]">{copy.available}</span>
               </div>
-              <p className="mt-3 min-h-[72px] text-sm leading-6 text-text-secondary">{copy.extensionBody}</p>
+              <p className="mt-4 min-h-[72px] text-sm leading-6 text-text-secondary">{copy.extensionBody}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <a
                   href={marketingLinks.chromeStoreUrl}
@@ -87,26 +106,10 @@ export function DownloadSection() {
                   rel="noopener noreferrer"
                   className="lovable-button-secondary gap-1.5 px-3 py-2 text-xs"
                 >
+                  <Download className="h-3.5 w-3.5" />
                   {copy.manual}
                 </a>
               </div>
-            </article>
-
-            <article className="rounded-xl border border-border-default bg-[rgba(252,251,248,0.72)] p-5">
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="text-base font-medium text-text-primary">{copy.cli}</h3>
-                <span className="rounded-full bg-bg-surface-hover px-2.5 py-1 text-[10px] font-medium text-text-secondary">{copy.comingSoon}</span>
-              </div>
-              <p className="mt-3 min-h-[72px] text-sm leading-6 text-text-secondary">{copy.cliBody}</p>
-              <a
-                href={marketingLinks.cliRepoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-text-primary transition-colors hover:text-vesti-accent"
-              >
-                {copy.repository}
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
             </article>
           </div>
 
