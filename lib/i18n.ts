@@ -54,7 +54,12 @@ export const messages = {
         "选择“加载已解压的扩展程序”，然后选择解压目录。",
       ],
     },
-    footer: { install: "下载", language: "English" },
+    footer: {
+      install: "下载",
+      language: "English",
+      userGroup: "用户群",
+      userGroupHint: "微信扫码加入用户群。二维码 7 天有效期，失效后我们会尽快更新。",
+    },
   },
   en: {
     nav: { products: "Products", features: "Features", demo: "Demo", github: "GitHub", install: "Get Vesti", switchLanguage: "Switch to Chinese" },
@@ -109,6 +114,11 @@ export const messages = {
         "Choose Load unpacked and select the extracted directory.",
       ],
     },
-    footer: { install: "Download", language: "中文" },
+    footer: {
+      install: "Download",
+      language: "中文",
+      userGroup: "User group",
+      userGroupHint: "Scan with WeChat to join the user group. The QR code is valid for 7 days and will be refreshed when it expires.",
+    },
   },
 } as const
