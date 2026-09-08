@@ -59,6 +59,7 @@ export const messages = {
       language: "English",
       userGroup: "用户群",
       userGroupHint: "微信扫码加入用户群。二维码 7 天有效期，失效后我们会尽快更新。",
+      privacy: "隐私政策",
     },
   },
   en: {
@@ -119,6 +120,7 @@ export const messages = {
       language: "中文",
       userGroup: "User group",
       userGroupHint: "Scan with WeChat to join the user group. The QR code is valid for 7 days and will be refreshed when it expires.",
+      privacy: "Privacy",
     },
   },
 } as const

@@ -30,6 +30,12 @@ export function Footer() {
               News
             </a>
             <a
+              href={assetPath("/privacy")}
+              className="transition-colors duration-150 hover:text-text-primary"
+            >
+              {copy.privacy}
+            </a>
+            <a
               href={marketingLinks.appRepoUrl}
               target="_blank"
               rel="noopener noreferrer"
