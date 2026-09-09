@@ -1,5 +1,5 @@
 // 最新构建产物直接托管在官网服务器,走 nginx 静态分发
-const windowsAppDownloadUrl = "/downloads/Vesti-0.3.0-Setup.exe"
+const windowsAppDownloadUrl = "/downloads/Vesti-0.3.1-Setup.exe"
 const linuxAppDownloadUrl =
   "https://box.nju.edu.cn/seafhttp/f/31fb1e4032fc4814a783/?op=view"
 const extensionDownloadUrl = "/downloads/vesti-extension-1.2.0-rc.8.zip"
