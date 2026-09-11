@@ -1,7 +1,6 @@
 // 最新构建产物直接托管在官网服务器,走 nginx 静态分发
-const windowsAppDownloadUrl = "/downloads/Vesti-0.3.1-Setup.exe"
-const linuxAppDownloadUrl =
-  "https://box.nju.edu.cn/seafhttp/f/31fb1e4032fc4814a783/?op=view"
+const windowsAppDownloadUrl = "/downloads/Vesti-0.3.2-Setup.exe"
+const linuxAppDownloadUrl = "/downloads/Vesti-0.3.2.AppImage"
 const extensionDownloadUrl = "/downloads/vesti-extension-1.2.0-rc.8.zip"
 
 export const marketingLinks = {
@@ -10,7 +9,8 @@ export const marketingLinks = {
   extensionRepoUrl: "https://github.com/221250144/VESTI",
   extensionDownloadUrl,
   appRepoUrl: "https://github.com/221250144/VESTI-APP",
-  appVersion: "0.3.0",
+  appVersion: "0.3.2",
+  appSha256: "06da5f6363df9772509a0e456788ec43698307f7804220e83a6387d42239d886",
   extensionVersion: "1.2.0-rc.8",
   appDownloads: {
     windows: windowsAppDownloadUrl,

@@ -45,7 +45,8 @@ export const messages = {
       store: "Chrome 商店",
       manual: "手动安装包",
       comingSoon: "待支持",
-      releaseHint: "Windows 安装包（v0.3.0）与插件手动安装包由官网服务器直接提供；macOS 版本即将提供。",
+      releaseHint: "Windows 安装包与插件手动安装包由官网服务器直接提供；macOS 版本即将提供。",
+      smartScreenHint: "Windows 首次安装若出现 SmartScreen 蓝色警告，点击「更多信息 → 仍要运行」即可（安装包暂未做代码签名，证书在筹备中）。下载后可核对安装包 SHA-256：",
       manualTitle: "插件手动安装步骤",
       manualSteps: [
         "点击“手动安装包”下载并解压插件。",
@@ -106,7 +107,8 @@ export const messages = {
       store: "Chrome Store",
       manual: "Manual package",
       comingSoon: "Coming soon",
-      releaseHint: "The Windows installer (v0.3.0) and the manual extension package are served directly from this site; the macOS build is coming soon.",
+      releaseHint: "The Windows installer and the manual extension package are served directly from this site; the macOS build is coming soon.",
+      smartScreenHint: "Windows may show a blue SmartScreen prompt on first install — click \"More info → Run anyway\" (the installer is not code-signed yet; a certificate is in the works). Verify the installer SHA-256 after download:",
       manualTitle: "Manual extension install",
       manualSteps: [
         "Select Manual package, then download and unzip the extension.",

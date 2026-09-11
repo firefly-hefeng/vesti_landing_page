@@ -74,6 +74,12 @@ export function DownloadSection() {
                   ),
                 )}
               </div>
+              <div className="mt-3">
+                <p className="text-[11px] leading-5 text-text-tertiary">{copy.smartScreenHint}</p>
+                <p className="mt-1 break-all font-mono text-[10px] leading-4 text-text-tertiary/80 select-all">
+                  {marketingLinks.appSha256}
+                </p>
+              </div>
             </article>
 
             <article className={cardClass}>
