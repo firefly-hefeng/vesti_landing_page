@@ -10,6 +10,7 @@
 **/dist/
 **/out/
 **/coverage/
+*.tsbuildinfo
 
 # Logs
 *.log

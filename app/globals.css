@@ -84,23 +84,45 @@
   }
 
   .section-kicker {
-    @apply text-[12px] font-medium tracking-[-0.01em] text-text-tertiary;
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-text-tertiary;
   }
 
   .lovable-panel {
     @apply rounded-2xl border bg-[rgba(252,251,248,0.86)];
     border-color: hsl(var(--border-default));
-    box-shadow: 0 1px 0 rgba(28, 28, 28, 0.04);
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0) 72px
+    );
+    box-shadow:
+      0 1px 0 rgba(28, 28, 28, 0.04),
+      0 12px 32px -16px rgba(28, 28, 28, 0.08);
   }
 
   .lovable-card {
     @apply rounded-2xl border bg-[rgba(252,251,248,0.9)];
     border-color: hsl(var(--border-default));
     box-shadow: 0 1px 0 rgba(28, 28, 28, 0.04);
+    transition:
+      border-color 150ms ease,
+      box-shadow 150ms ease,
+      transform 150ms ease;
+  }
+
+  .lovable-card:hover {
+    border-color: hsl(var(--border-default) / 0.6);
+    box-shadow:
+      0 1px 0 rgba(28, 28, 28, 0.04),
+      0 10px 28px -14px rgba(28, 28, 28, 0.12);
+    transform: translateY(-1px);
   }
 
   .lovable-button-primary {
     @apply inline-flex items-center justify-center rounded-lg bg-text-primary px-5 py-3 text-sm font-medium text-[hsl(var(--text-inverse))] transition-colors duration-150 hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+    box-shadow:
+      0 1px 0 rgba(28, 28, 28, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   .lovable-button-secondary {
@@ -110,8 +132,13 @@
   .lovable-media-frame {
     @apply overflow-hidden rounded-2xl border bg-[rgba(252,251,248,0.94)];
     border-color: hsl(var(--border-default));
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0) 96px
+    );
     box-shadow:
       0 1px 0 rgba(28, 28, 28, 0.04),
-      0 16px 48px rgba(28, 28, 28, 0.05);
+      0 24px 56px -24px rgba(28, 28, 28, 0.1);
   }
 }
