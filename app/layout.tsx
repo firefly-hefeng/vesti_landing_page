@@ -19,7 +19,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vesti.rth3.xyz"),
+  metadataBase: new URL("https://vesti.world"),
   title: "Vesti — The working-memory engine for domain-specific agents",
   description:
     "Vesti captures agent conversations across browsers and CLI coding agents, organizes them into structured local memory, and serves recall to any agent through MCP.",
